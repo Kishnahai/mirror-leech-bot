@@ -65,8 +65,9 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Repo", "https://www.github.com/anasty17/mirror-leech-telegram-bot")
-    buttons.buildbutton("Report Group", "https://t.me/+PRRzqHd31XY3ZWZk")
+    buttons.buildbutton("Repo", "https://github.com/woodcraft5/mirror-leech-bot")
+    buttons.buildbutton("Report Group", "https://t.me/FLAC_Org_Sound_track_Chat_On")
+    buttons.buildbutton("Owner", "https://t.me/woodcraft5")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
@@ -170,7 +171,7 @@ help_string_telegraph = f'''<br>
 '''
 
 help = telegraph.create_page(
-        title='Mirror-Leech-Bot Help',
+        title='WOODcraft-Bot Help',
         content=help_string_telegraph,
     )["path"]
 
