@@ -78,4 +78,4 @@ class TelegraphHelper:
         return
 
 
-telegraph=TelegraphHelper('WOODcraft-Telegram-Repo', 'https://github.com/anasty17/mirror-leech-telegram-bot')
+telegraph=TelegraphHelper('WOODcraft-Telegram-Repo', 'https://github.com/woodcraft5/mirror-leech-bot')
