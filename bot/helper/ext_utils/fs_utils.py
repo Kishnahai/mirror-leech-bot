@@ -150,9 +150,8 @@ def split_file(path, size, file_, dirpath, split_size, start_time=0, i=1, inLoop
         while i <= parts :
             parted_name = "{}.part{}{}".format(str(base_name), str(i).zfill(3), str(extension))
             out_path = ospath.join(dirpath, parted_name)
-            srun(["ffmpeg", "-hide_banner", "-loglevel", "error", "-i",
-                            path, "-ss", str(start_time), "-fs", str(split_size),
-                            "-async", "1", "-strict", "-2", "-c", "copy", out_path])
+            srun(["ffmpeg", "-hide_banner", "-loglevel", "error", "-ss", str(start_time),
+                  "-i", path, "-fs", str(split_size), "-map", "0", "-c", "copy", out_path])
             out_size = get_path_size(out_path)
             if out_size > 2097152000:
                 dif = out_size - 2097152000
