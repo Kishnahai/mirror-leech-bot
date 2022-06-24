@@ -43,7 +43,7 @@ This is a Telegram Bot written in Python for mirroring files on the Internet to 
 - Uploading to Team Drive
 - Index Link support
 - Service Account support
-- Delete files from Drive
+- Delete files from Drive 
 - Shortener support
 - Multiple Trackers support
 - Shell and Executor
