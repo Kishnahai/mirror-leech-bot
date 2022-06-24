@@ -134,7 +134,10 @@ def take_ss(video_file):
 
     if status.returncode != 0 or not ospath.lexists(des_dir):
         return None
-    Image.open(des_dir).convert("RGB").save(des_dir, "JPEG")
+
+    with Image.open(des_dir) as img:
+        img.convert("RGB").save(des_dir, "JPEG")
+        
     return des_dir
 
 def split_file(path, size, file_, dirpath, split_size, start_time=0, i=1, inLoop=False):
