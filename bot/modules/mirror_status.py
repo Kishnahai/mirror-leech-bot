@@ -47,3 +47,4 @@ mirror_status_handler = CommandHandler(BotCommands.StatusCommand, mirror_status,
 status_pages_handler = CallbackQueryHandler(status_pages, pattern="status", run_async=True)
 dispatcher.add_handler(mirror_status_handler)
 dispatcher.add_handler(status_pages_handler)
+help_string
