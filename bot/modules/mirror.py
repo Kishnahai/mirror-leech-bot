@@ -200,11 +200,12 @@ class MirrorListener:
             msg += f'\n<b>Total Files: </b>{folders}'
             if typ != 0:
                 msg += f'\n<b>Corrupted Files: </b>{typ}'
-            msg += f'\n<b>cc: </b>{self.tag}\n\n'
+            msg += f'\n<b>Hey </b>{self.tag} <b>Your Job is Done</b>\n<b>Thanks For using @woodcraft5</b>\n'
+            # msg += f'\n<b>cc: </b>{self.tag}\n\n'
             if not files:
                 sendMessage(msg, self.bot, self.message)
             else:
-                fmsg = ''
+                fmsg = '\n<b>Your Files Are:</b>\n\n'
                 for index, (link, name) in enumerate(files.items(), start=1):
                     fmsg += f"{index}. <a href='{link}'>{name}</a>\n"
                     if len(fmsg.encode() + msg.encode()) > 4000:
@@ -218,7 +219,8 @@ class MirrorListener:
             if ospath.isdir(f'{DOWNLOAD_DIR}{self.uid}/{name}'):
                 msg += f'\n<b>SubFolders: </b>{folders}'
                 msg += f'\n<b>Files: </b>{files}'
-            msg += f'\n\n<b>cc: </b>{self.tag}'
+            msg += f'\n\n<b>Hey </b>{self.tag} <b>Your Job is Done</b>\n<b>Thanks For using @woodcraft5</b>'
+            # msg += f'\n\n<b>cc: </b>{self.tag}'
             buttons = ButtonMaker()
             link = short_url(link)
             buttons.buildbutton("☁️ Drive Link ✅", link)
@@ -236,7 +238,7 @@ class MirrorListener:
                     if VIEW_LINK:
                         share_urls = f'{INDEX_URL}/{url_path}?a=view'
                         share_urls = short_url(share_urls)
-                        buttons.buildbutton("🌼 View Link", share_urls)
+                        buttons.buildbutton("🌼 View Link 🌼", share_urls)
             if BUTTON_FOUR_NAME is not None and BUTTON_FOUR_URL is not None:
                 buttons.buildbutton(f"{BUTTON_FOUR_NAME}", f"{BUTTON_FOUR_URL}")
             if BUTTON_FIVE_NAME is not None and BUTTON_FIVE_URL is not None:
@@ -283,33 +285,38 @@ class MirrorListener:
 
 def _mirror(bot, message, isZip=False, extract=False, isQbit=False, isLeech=False, pswd=None, multi=0):
     mesg = message.text.split('\n')
-    message_args = mesg[0].split(' ', maxsplit=1)
+    message_args = mesg[0].split(maxsplit=1)
     name_args = mesg[0].split('|', maxsplit=1)
     qbitsel = False
     is_gdtot = False
-    try:
-        link = message_args[1]
+    
+    if len(message_args) > 1:
+        link = message_args[1].strip()
         if link.startswith("s ") or link == "s":
             qbitsel = True
-            message_args = mesg[0].split(' ', maxsplit=2)
-            link = message_args[2].strip()
+            message_args = mesg[0].split(maxsplit=2)
+            if len(message_args) > 2:
+                link = message_args[2].strip()
+            else:
+                link = ''
         elif link.isdigit():
             multi = int(link)
-            raise IndexError
-        if link.startswith(("|", "pswd: ")):
-            raise IndexError
-    except:
+            link = ''
+        if link.startswith(("|", "pswd:")):
+            link = ''
+    else:
         link = ''
-    try:
+    
+    if len(name_args) > 1:
         name = name_args[1]
         name = name.split(' pswd:')[0]
         name = name.strip()
     else:
         name = ''
-
-    link = re_split(r"pswd:| \|", link)[0]
+    
+    link = re_split(r"pswd:|\|", link)[0]
     link = link.strip()
-
+    
     pswd_arg = mesg[0].split(' pswd: ')
     if len(pswd_arg) > 1:
         pswd = pswd_arg[1]
