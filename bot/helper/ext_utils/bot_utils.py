@@ -172,6 +172,7 @@ def get_readable_message():
                 try:
                     msg += f"\n<b>Seeders:</b> {download.torrent_info().num_seeds}" \
                            f" | <b>Leechers:</b> {download.torrent_info().num_leechs}"
+                    msg += f"\n<b>Engine:</b> <code>qBittorrent v4.4.2</code>"       
                 except:
                     pass
                 msg += f"\n<code>/{BotCommands.CancelMirror} {download.gid()}</code>"
