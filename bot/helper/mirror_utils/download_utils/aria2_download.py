@@ -21,7 +21,7 @@ def __onDownloadStarted(api, gid):
                 download = api.get_download(gid)
             LOGGER.info(f'onDownloadStarted: {gid}')
             dl = getDownloadByGid(gid)
-            if not dl:
+            if not dl or dl.getListener().isLeech:
                 return
             if STOP_DUPLICATE and not dl.getListener().isLeech:
                 LOGGER.info('Checking File/Folder if already in Drive...')
