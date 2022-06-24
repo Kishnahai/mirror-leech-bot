@@ -166,6 +166,7 @@ def get_readable_message():
                 try:
                     msg += f"\n<b>Seeders:</b> {download.aria_download().num_seeders}" \
                            f" | <b>Peers:</b> {download.aria_download().connections}"
+                    msg += f"\n<b>Engine:</b> <code>Aria2c v1.35.0</code>"     
                 except:
                     pass
                 try:
