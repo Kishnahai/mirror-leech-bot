@@ -54,9 +54,9 @@ def rss_get(update, context):
 
 def rss_sub(update, context):
     try:
-        args = update.message.text.split(" ", 3)
-        title = str(args[1])
-        feed_link = str(args[2])
+        args = update.message.text.split(maxsplit=3)
+        title = args[1].strip()
+        feed_link = args[2].strip()
         f_lists = []
         try:
             filters = str(args[3]).lower()
