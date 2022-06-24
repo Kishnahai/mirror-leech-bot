@@ -44,6 +44,7 @@ def stats(update, context):
     mem_t = get_readable_file_size(memory.total)
     mem_a = get_readable_file_size(memory.available)
     mem_u = get_readable_file_size(memory.used)
+
     stats = f'<b>🌼 Commit Date:</b> {last_commit}\n'\
             f'<b>🌼 Bot Uptime:</b> {currentTime}\n'\
             f'<b>🌼 OS Uptime:</b> {osUptime}\n'\
@@ -60,18 +61,22 @@ def stats(update, context):
             f'<b>🌼 Memory Total:</b> {mem_t}\n'\
             f'<b>🌼 Memory Free:</b> {mem_a}\n'\
             f'<b>🌼 Memory Used:</b> {mem_u}\n'
+
     sendMessage(stats, context.bot, update.message)
 
 
 def start(update, context):
     buttons = ButtonMaker()
+
     buttons.buildbutton("💚 Repo 💚", "https://github.com/woodcraft5/mirror-leech-bot")
-    buttons.buildbutton("🔴 Report Group 🔴", "https://t.me/FLAC_Org_Sound_track_Chat_On")
-    buttons.buildbutton("🔲 Owner 🔲", "https://t.me/woodcraft5")
+    buttons.buildbutton(""🔴 Report Group 🔴", "https://t.me/FLAC_Org_Sound_track_Chat_On")
+    buttons.buildbutton("Mirror Group", "https://t.me/FLAC_Org_Sound_track_Chat_On")
+    buttons.buildbutton("🔲 Owner 🔲", "https://t.me/woodcraft5"")
+
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-Welcome | WOODcraft Mirror service is ready for you
+Welcome | Z Mirror service is ready for you
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
@@ -262,7 +267,7 @@ def main():
                                  try:
                                      bot.sendMessage(cid, msg, 'HTML')
                                  except Exception as e:
-                                     LOGGER.error(e)                              
+                                     LOGGER.error(e)
                              msg = ''
                 if 'Restarted successfully!' in msg and cid == chat_id:
                      bot.editMessageText(msg, chat_id, msg_id, parse_mode='HTMl', disable_web_page_preview=True)
