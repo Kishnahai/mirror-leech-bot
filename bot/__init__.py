@@ -154,7 +154,7 @@ try:
         raise KeyError
     rss_session = Client(name='rss_session', api_id=int(TELEGRAM_API), api_hash=TELEGRAM_HASH, session_string=USER_SESSION_STRING, parse_mode=enums.ParseMode.HTML, no_updates=True)
 except:
-    USER_SESSION_STRING = None
++   USER_SESSION_STRING = None
     rss_session = None
 
 def aria2c_init():
