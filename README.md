@@ -529,3 +529,8 @@ To Clone or Leech gdtot link follow these steps:
 4. From this you have to paste value for **CRYPT** in config.env file.
 
 -----
+## Credits
+
+P.s - Credit goes to all original developers of python, pyrogram, linux, heroku, mirror bots, leech bots, Mega, megasdkrest, sql database, google drive, telegram, and everything used in this project,
+
+  #### Main Credit - [Anas Sir](https://github.com/anasty17/mirror-leech-telegram-bot)
