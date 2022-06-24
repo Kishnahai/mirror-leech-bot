@@ -190,17 +190,4 @@ def get_media_info(path):
     except:
         title = None
     return duration, artist, title
-
-def get_video_resolution(path):
-    try:
-        result = check_output(["ffprobe", "-hide_banner", "-loglevel", "error", "-select_streams", "v:0",
-                                          "-show_entries", "stream=width,height", "-of", "json", path]).decode('utf-8')
-        fields = jsnloads(result)['streams'][0]
-
-        width = int(fields['width'])
-        height = int(fields['height'])
-        return width, height
-    except Exception as e:
-        LOGGER.error(f"get_video_resolution: {e}")
-        return 480, 320
-
+    
