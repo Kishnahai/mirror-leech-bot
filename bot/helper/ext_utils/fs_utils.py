@@ -190,4 +190,3 @@ def get_media_info(path):
     except:
         title = None
     return duration, artist, title
-    
