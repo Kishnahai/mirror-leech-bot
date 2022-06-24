@@ -137,7 +137,7 @@ def take_ss(video_file):
 
     with Image.open(des_dir) as img:
         img.convert("RGB").save(des_dir, "JPEG")
-        
+
     return des_dir
 
 def split_file(path, size, file_, dirpath, split_size, start_time=0, i=1, inLoop=False):
@@ -146,7 +146,7 @@ def split_file(path, size, file_, dirpath, split_size, start_time=0, i=1, inLoop
         split_size = ceil(size/parts) + 1000
     if file_.upper().endswith(VIDEO_SUFFIXES):
         base_name, extension = ospath.splitext(file_)
-        split_size = split_size - 2500000
+        split_size = split_size - 3000000
         while i <= parts :
             parted_name = "{}.part{}{}".format(str(base_name), str(i).zfill(3), str(extension))
             out_path = ospath.join(dirpath, parted_name)
