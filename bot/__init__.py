@@ -110,24 +110,24 @@ AS_MEDIA_USERS = set()
 + EXTENSION_FILTER = set()
 try:
     aid = getConfig('AUTHORIZED_CHATS')
-    aid = aid.split(' ')
++    aid = aid.split()
     for _id in aid:
 +       AUTHORIZED_CHATS.add(int(_id.strip()))
 except:
     pass
 try:
     aid = getConfig('SUDO_USERS')
-    aid = aid.split(' ')
++   aid = aid.split()
     for _id in aid:
-        SUDO_USERS.add(int(_id))
++       SUDO_USERS.add(int(_id.strip()))
 except:
     pass
 try:
-    fx = getConfig('EXTENTION_FILTER')
++   fx = getConfig('EXTENTION_FILTER')
     if len(fx) > 0:
-        fx = fx.split(' ')
++       fx = fx.split()
         for x in fx:
-            EXTENTION_FILTER.add(x.lower())
++           EXTENTION_FILTER.add(x.lower())
 except:
     pass
 try:
