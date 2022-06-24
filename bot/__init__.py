@@ -106,8 +106,9 @@ rss_dict = {}
 AUTHORIZED_CHATS = set()
 SUDO_USERS = set()
 AS_DOC_USERS = set()
-AS_MEDIA_USERS = set() 
+AS_MEDIA_USERS = set()
 EXTENSION_FILTER = set()
+
 try:
     aid = getConfig('AUTHORIZED_CHATS')
     aid = aid.split()
@@ -123,7 +124,7 @@ try:
 except:
     pass
 try:
-    fx = getConfig('EXTENTION_FILTER')
+    fx = getConfig('EXTENSION_FILTER')
     if len(fx) > 0:
         fx = fx.split()
         for x in fx:
@@ -277,12 +278,12 @@ try:
 except:
     STORAGE_THRESHOLD = None
 try:
-   ZIP_UNZIP_LIMIT = getConfig('ZIP_UNZIP_LIMIT')
-   if len(ZIP_UNZIP_LIMIT) == 0:
-       raise KeyError
-   ZIP_UNZIP_LIMIT = float(ZIP_UNZIP_LIMIT)
+    ZIP_UNZIP_LIMIT = getConfig('ZIP_UNZIP_LIMIT')
+    if len(ZIP_UNZIP_LIMIT) == 0:
+        raise KeyError
+    ZIP_UNZIP_LIMIT = float(ZIP_UNZIP_LIMIT)
 except:
-   ZIP_UNZIP_LIMIT = None
+    ZIP_UNZIP_LIMIT = None
 try:
     RSS_CHAT_ID = getConfig('RSS_CHAT_ID')
     if len(RSS_CHAT_ID) == 0:
@@ -329,8 +330,8 @@ except:
     BUTTON_SIX_NAME = None
     BUTTON_SIX_URL = None
 try:
-     INCOMPLETE_TASK_NOTIFIER = getConfig('INCOMPLETE_TASK_NOTIFIER')
-     INCOMPLETE_TASK_NOTIFIER = INCOMPLETE_TASK_NOTIFIER.lower() == 'true'
+    INCOMPLETE_TASK_NOTIFIER = getConfig('INCOMPLETE_TASK_NOTIFIER')
+    INCOMPLETE_TASK_NOTIFIER = INCOMPLETE_TASK_NOTIFIER.lower() == 'true'
 except:
     INCOMPLETE_TASK_NOTIFIER = False
 try:
