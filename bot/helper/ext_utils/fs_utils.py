@@ -155,7 +155,7 @@ def split_file(path, size, file_, dirpath, split_size, start_time=0, i=1, inLoop
             out_size = get_path_size(out_path)
             if out_size > 2097152000:
                 dif = out_size - 2097152000
-                split_size = split_size - dif + 2500000
+                split_size = split_size - dif + 3000000
                 osremove(out_path)
                 return split_file(path, size, file_, dirpath, split_size, start_time, i, inLoop=True)
             lpd = get_media_info(out_path)[0]
