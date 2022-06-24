@@ -248,41 +248,41 @@ try:
         raise KeyError
 except:
     CMD_INDEX = ''
-try:
-    TORRENT_DIRECT_LIMIT = getConfig('TORRENT_DIRECT_LIMIT')
-    if len(TORRENT_DIRECT_LIMIT) == 0:
-        raise KeyError
-    TORRENT_DIRECT_LIMIT = float(TORRENT_DIRECT_LIMIT)
-except:
-    TORRENT_DIRECT_LIMIT = None
-try:
-    CLONE_LIMIT = getConfig('CLONE_LIMIT')
-    if len(CLONE_LIMIT) == 0:
-        raise KeyError
-    CLONE_LIMIT = float(CLONE_LIMIT)
-except:
-    CLONE_LIMIT = None
-try:
-    MEGA_LIMIT = getConfig('MEGA_LIMIT')
-    if len(MEGA_LIMIT) == 0:
-        raise KeyError
-    MEGA_LIMIT = float(MEGA_LIMIT)
-except:
-    MEGA_LIMIT = None
-try:
-    STORAGE_THRESHOLD = getConfig('STORAGE_THRESHOLD')
-    if len(STORAGE_THRESHOLD) == 0:
-        raise KeyError
-    STORAGE_THRESHOLD = float(STORAGE_THRESHOLD)
-except:
-    STORAGE_THRESHOLD = None
-try:
-    ZIP_UNZIP_LIMIT = getConfig('ZIP_UNZIP_LIMIT')
-    if len(ZIP_UNZIP_LIMIT) == 0:
-        raise KeyError
-    ZIP_UNZIP_LIMIT = float(ZIP_UNZIP_LIMIT)
-except:
-    ZIP_UNZIP_LIMIT = None
++ try:
++     TORRENT_DIRECT_LIMIT = getConfig('TORRENT_DIRECT_LIMIT')
++     if len(TORRENT_DIRECT_LIMIT) == 0:
++         raise KeyError
++     TORRENT_DIRECT_LIMIT = float(TORRENT_DIRECT_LIMIT)
++ except:
++     TORRENT_DIRECT_LIMIT = None
++ try:
++     CLONE_LIMIT = getConfig('CLONE_LIMIT')
++     if len(CLONE_LIMIT) == 0:
++         raise KeyError
++     CLONE_LIMIT = float(CLONE_LIMIT)
++ except:
++     CLONE_LIMIT = None
++ try:
++     MEGA_LIMIT = getConfig('MEGA_LIMIT')
++     if len(MEGA_LIMIT) == 0:
++         raise KeyError
++     MEGA_LIMIT = float(MEGA_LIMIT)
++ except:
++     MEGA_LIMIT = None
++ try:
++     STORAGE_THRESHOLD = getConfig('STORAGE_THRESHOLD')
++     if len(STORAGE_THRESHOLD) == 0:
++         raise KeyError
++     STORAGE_THRESHOLD = float(STORAGE_THRESHOLD)
++ except:
++     STORAGE_THRESHOLD = None
++ try:
++     ZIP_UNZIP_LIMIT = getConfig('ZIP_UNZIP_LIMIT')
++     if len(ZIP_UNZIP_LIMIT) == 0:
++         raise KeyError
++     ZIP_UNZIP_LIMIT = float(ZIP_UNZIP_LIMIT)
++ except:
++     ZIP_UNZIP_LIMIT = None
 try:
     RSS_CHAT_ID = getConfig('RSS_CHAT_ID')
     if len(RSS_CHAT_ID) == 0:
