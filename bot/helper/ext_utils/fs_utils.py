@@ -130,11 +130,9 @@ def take_ss(video_file):
     
     status = srun(["ffmpeg", "-hide_banner", "-loglevel", "error", "-ss", str(duration),
                         "-i", video_file, "-vframes", "1", des_dir])
-                        "-i", video_file, "-vframes", "1", des_dir])
-    except:
-        return None
+    
 
-    if not ospath.lexists(des_dir):
+    if status.returncode != 0 or not ospath.lexists(des_dir):
         return None
     Image.open(des_dir).convert("RGB").save(des_dir, "JPEG")
     return des_dir
