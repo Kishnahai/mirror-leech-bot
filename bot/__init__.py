@@ -112,7 +112,7 @@ try:
     aid = getConfig('AUTHORIZED_CHATS')
     aid = aid.split(' ')
     for _id in aid:
-        AUTHORIZED_CHATS.add(int(_id))
++       AUTHORIZED_CHATS.add(int(_id.strip()))
 except:
     pass
 try:
