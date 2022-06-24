@@ -169,12 +169,13 @@ def split_file(path, size, file_, dirpath, split_size, start_time=0, i=1, inLoop
         srun(["split", "--numeric-suffixes=1", "--suffix-length=3", f"--bytes={split_size}", path, out_path])
 
 def get_media_info(path):
-    try:
-        result = check_output(["ffprobe", "-hide_banner", "-loglevel", "error", "-print_format",
-                                          "json", "-show_format", path]).decode('utf-8')
-        fields = jsnloads(result)['format']
-    except Exception as e:
-        LOGGER.error(f"get_media_info: {e}")
+    
+    result = check_output(["ffprobe", "-hide_banner", "-loglevel", "error", "-print_format",
+                           "json", "-show_format", path]).decode('utf-8')
+
+    fields = jsnloads(result).get('format')
+    if fields is None:
+        LOGGER.error(f"get_media_info: {result}")
         return 0, None, None
     try:
         duration = round(float(fields['duration']))
