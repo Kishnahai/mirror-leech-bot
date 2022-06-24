@@ -302,15 +302,17 @@ def _mirror(bot, message, isZip=False, extract=False, isQbit=False, isLeech=Fals
         link = ''
     try:
         name = name_args[1]
-        name = name.split(' pswd: ')[0]
+        name = name.split(' pswd:')[0]
         name = name.strip()
-    except:
+    else:
         name = ''
+
     link = re_split(r"pswd:| \|", link)[0]
     link = link.strip()
-    pswdMsg = mesg[0].split(' pswd: ')
-    if len(pswdMsg) > 1:
-        pswd = pswdMsg[1]
+
+    pswd_arg = mesg[0].split(' pswd: ')
+    if len(pswd_arg) > 1:
+        pswd = pswd_arg[1]
 
     if message.from_user.username:
         tag = f"@{message.from_user.username}"
