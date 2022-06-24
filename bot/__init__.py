@@ -142,7 +142,7 @@ try:
     TELEGRAM_API = getConfig('TELEGRAM_API')
     TELEGRAM_HASH = getConfig('TELEGRAM_HASH')
 except:
-    LOGGER.error("One or more env variables missing! Exiting now")
+    log_error("One or more env variables missing! Exiting now")
     exit(1)
 
 LOGGER.info("Generating BOT_SESSION_STRING")
