@@ -106,9 +106,8 @@ rss_dict = {}
 AUTHORIZED_CHATS = set()
 SUDO_USERS = set()
 AS_DOC_USERS = set()
-AS_MEDIA_USERS = set()
-EXTENTION_FILTER = set(['.torrent'])
-
+AS_MEDIA_USERS = set() 
++ EXTENSION_FILTER = set()
 try:
     aid = getConfig('AUTHORIZED_CHATS')
     aid = aid.split(' ')
