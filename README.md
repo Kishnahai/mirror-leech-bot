@@ -247,7 +247,7 @@ sudo docker image prune -a
 
 ------
 
-<p><a href="https://t.me/BotFather"> <img src="https://img.shields.io/badge/%E2%96%BA-Deploying%20on%20VPS%20Using%20Docker-green" width="160""/></a></p>
+<p><a href=""> <img src="https://img.shields.io/badge/%E2%96%BA-Deploying%20on%20VPS%20Using%20Docker-green" width="170""/></a></p>
 
 - Start Docker daemon (skip if already running), if installed by snap then use 2nd command:
 ```
