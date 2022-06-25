@@ -3,6 +3,7 @@ This is a Telegram Bot written in Python for mirroring files on the Internet to 
 # Features:
 
 ## By [WOODcraft](https://github.com/woodcraft5)
+<p><a href="https://github.com/woodcraft5https://github.com/woodcraft5"> <img src="https://img.shields.io/badge/Repo%20%E2%96%BA-WOODcraft-blue" width="160""/></a></p>
 - qBittorrent
 - Select files from Torrent before downloading using qbittorrent
 - Leech (splitting, thumbnail for each user, setting as document or as media for each user)
