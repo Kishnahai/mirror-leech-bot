@@ -314,7 +314,7 @@ sudo docker-compose start
 # Extras
 
 ## Bot commands to be set in [@BotFather](https://t.me/BotFather)
-<p><a href="https://github.com/woodcraft5/mirror-leech-bot/tree/heroku"> <img src="https://img.shields.io/badge/%E2%96%BA-BotFather-blue" width="160""/></a></p>
+<p><a href="https://t.me/BotFather"> <img src="https://img.shields.io/badge/%E2%96%BA-BotFather-blue" width="160""/></a></p>
 
 ```
 mirror - Mirror
