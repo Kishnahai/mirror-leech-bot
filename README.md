@@ -531,7 +531,9 @@ To Clone or Leech gdtot link follow these steps:
 
 -----
 ## Credits
+<p><a href="https://github.com/anasty17/mirror-leech-telegram-bot"> <img src=https://img.shields.io/badge/%E2%96%BA-Anas-green"" width="160""/></a></p>
 
 P.s - Credit goes to all original developers of python, pyrogram, linux, heroku, mirror bots, leech bots, Mega, megasdkrest, sql database, google drive, telegram, and everything used in this project,
 
   #### Main Credit - [✅ Anas Sir ✅](https://github.com/anasty17/mirror-leech-telegram-bot)
+  <p><a href="https://github.com/anasty17/mirror-leech-telegram-bot"> <img src=https://img.shields.io/badge/%E2%96%BA-Anas--sir-green"" width="160""/></a></p>
