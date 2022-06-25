@@ -375,7 +375,7 @@ help - All cmds with description
 ------
 
 ### Using Service Accounts for uploading to avoid user rate limit
-<p><a href="https://github.com/woodcraft5/mirror-leech-bot"> <img src="https://img.shields.io/badge/%E2%96%BA-Using%20Service%20Accounts%20for%20uploading%20to%20avoid%20user%20rate%20limit-brightgreen" width="100""/></a></p>
+<p><a href="https://github.com/woodcraft5/mirror-leech-bot"> <img src="https://img.shields.io/badge/%E2%96%BA-Using%20Service%20Accounts%20for%20uploading%20to%20avoid%20user%20rate%20limit-brightgreen" width="190""/></a></p>
 >For Service Account to work, you must set `USE_SERVICE_ACCOUNTS` = "True" in config file or environment variables.
 >**NOTE**: Using Service Accounts is only recommended while uploading to a Team Drive.
 
