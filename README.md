@@ -374,7 +374,8 @@ help - All cmds with description
 
 ------
 
-<p><a href="https://github.com/woodcraft5/mirror-leech-bot"> <img src="https://img.shields.io/badge/%E2%96%BA-Using%20Service%20Accounts%20for%20uploading%20to%20avoid%20user%20rate%20limit-brightgreen" width="160""/></a></p>
+### Using Service Accounts for uploading to avoid user rate limit
+<p><a href="https://github.com/woodcraft5/mirror-leech-bot"> <img src="https://img.shields.io/badge/%E2%96%BA-Using%20Service%20Accounts%20for%20uploading%20to%20avoid%20user%20rate%20limit-brightgreen" width="100""/></a></p>
 >For Service Account to work, you must set `USE_SERVICE_ACCOUNTS` = "True" in config file or environment variables.
 >**NOTE**: Using Service Accounts is only recommended while uploading to a Team Drive.
 
@@ -544,4 +545,4 @@ P.s - Credit goes to all original developers of python, pyrogram, linux, heroku,
   <p><a href="https://github.com/anasty17/mirror-leech-telegram-bot"> <img src=https://img.shields.io/badge/%E2%96%BA-Anas--sir-green"" width="160""/></a></p>
 
 
-<img src=https://img.shields.io/badge/%E2%96%B7%20%E2%96%B7%20%E2%96%B7%20%E2%96%B7%20%E2%96%B7%20%E2%96%B7%20-WOODcraft%20%E2%96%BA-brightgreen"" width="190""/></a></p>
+<p><a href="https://github.com/woodcraft5/mirror-leech-bot"> <img src=https://img.shields.io/badge/%E2%96%B7%20%E2%96%B7%20%E2%96%B7%20%E2%96%B7%20%E2%96%B7%20%E2%96%B7%20-WOODcraft%20%E2%96%BA-brightgreen"" width="190""/></a></p>
